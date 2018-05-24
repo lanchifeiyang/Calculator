@@ -8,8 +8,6 @@ public class CalculatorActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculator);
-        int a = 1;
-        int b = 1;
+        setContentView(R.layout.activity_calculator); 
     }
 }
