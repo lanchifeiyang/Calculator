@@ -10,5 +10,6 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calculator);
         int a = 1;
+        int b = 1;
     }
 }
