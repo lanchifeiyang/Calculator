@@ -2,6 +2,8 @@ package com.project.chenzs.calculatorapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,9 +17,17 @@ public class CalculatorActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        TextView history = findViewById(R.id.history);
-        TextView currentText = findViewById(R.id.currentText);
-        RelativeLayout buttonGroup = findViewById(R.id.buttonGroup);
+        final TextView currentText = findViewById(R.id.currentText);
+        RelativeLayout buttonGroup = findViewById(R.id.numberGroup);
 
+        for(int i=0;i<buttonGroup.getChildCount();i++){
+            final Button btn = (Button)buttonGroup.getChildAt(i);
+            btn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    currentText.append(btn.getText());
+                }
+            });
+        }
     }
 }
