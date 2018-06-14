@@ -12,7 +12,8 @@
         android:layout_height="match_parent"
         android:background="@drawable/background"
         android:orientation="vertical">
-        <ScrollView
+        <LinearLayout
+            android:id="@+id/resultView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -21,17 +22,33 @@
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="10dp"
-            android:scrollbars="vertical" >
+            android:orientation="vertical">
             <TextView
-                android:id="@+id/currentText"
+                android:id="@+id/history"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:gravity="bottom"
-                android:background="#ffffaa"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:textColor="#797878"
+                android:textSize="20sp"
+                android:padding="8dp"
+                android:gravity="end"
+                android:scrollbars="vertical"
+                android:fadeScrollbars="true"/>
+            <EditText
+                android:id="@+id/currentText"
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#fff"
+                android:gravity="end"
                 android:textColor="#000"
-                android:textSize="40sp"  />
-        </ScrollView>
+                android:textSize="40sp"
+                android:singleLine="true"
+                android:enabled="false"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:focusable="false"/>
+        </LinearLayout>
         <RelativeLayout
             android:id="@+id/buttonGroup"
             android:layout_width="match_parent"
@@ -44,7 +61,7 @@
                 android:text="@string/opt_c"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textColor="#fdad3c"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
@@ -54,7 +71,7 @@
                 android:text="@string/opt_del"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
                 android:layout_toEndOf="@id/clear"/>
@@ -63,7 +80,7 @@
                 android:text="@string/opt_divide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
                 android:layout_toEndOf="@id/delete"/>
@@ -72,7 +89,7 @@
                 android:text="@string/opt_multiply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
                 android:layout_toEndOf="@id/divide"/>
@@ -87,7 +104,7 @@
                     android:text="@string/num_7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_alignParentStart="true"/>
                 <Button
@@ -95,7 +112,7 @@
                     android:text="@string/num_8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num7"/>
                 <Button
@@ -103,7 +120,7 @@
                     android:text="@string/num_9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num8"/>
                 <Button
@@ -111,7 +128,7 @@
                     android:text="@string/num_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/num7"/>
@@ -120,7 +137,7 @@
                     android:text="@string/num_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num4"
                     android:layout_below="@id/num8"/>
@@ -129,7 +146,7 @@
                     android:text="@string/num_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num5"
                     android:layout_below="@id/num9"/>
@@ -138,7 +155,7 @@
                     android:text="@string/num_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/num4"/>
@@ -147,7 +164,7 @@
                     android:text="@string/num_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num1"
                     android:layout_below="@id/num5"/>
@@ -156,7 +173,7 @@
                     android:text="@string/num_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@+id/num2"
                     android:layout_below="@id/num6"/>
@@ -165,7 +182,7 @@
                     android:text="@string/num_separator"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_toEndOf="@id/num2"
                     android:layout_below="@id/num3"/>
@@ -174,7 +191,7 @@
                     android:text="@string/num_0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:height="70dp"
+                    android:height="@dimen/btn_height"
                     android:textSize="12pt"
                     android:layout_alignParentStart="true"
                     android:layout_below="@id/num1"
@@ -186,7 +203,7 @@
                 android:text="@string/opt_minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
                 android:layout_toEndOf="@id/numberGroup"
@@ -196,7 +213,7 @@
                 android:text="@string/opt_plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt"
                 android:layout_toEndOf="@id/numberGroup"
@@ -206,7 +223,7 @@
                 android:text="@string/opt_equal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:height="70dp"
+                android:height="@dimen/btn_height"
                 android:textSize="12pt"
                 android:background="@drawable/my_button_opt_equal"
                 android:layout_below="@+id/plus"

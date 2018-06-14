@@ -1,12 +1,15 @@
 <resources>
     <string name="app_name">计算器</string>
-    <string name="opt_c">c</string>
+
+    <string name="opt_c">C</string>
+    <string name="opt_ac">AC</string>
     <string name="opt_del">DEL</string>
     <string name="opt_divide">÷</string>
     <string name="opt_multiply">×</string>
     <string name="opt_minus">-</string>
     <string name="opt_plus">+</string>
     <string name="opt_equal">=</string>
+
     <string name="num_separator">.</string>
     <string name="num_0">0</string>
     <string name="num_1">1</string>
@@ -18,4 +21,5 @@
     <string name="num_7">7</string>
     <string name="num_8">8</string>
     <string name="num_9">9</string>
+
 </resources>
