@@ -7,8 +7,6 @@
             <corners android:radius="2dp" />
             <gradient android:startColor="#c18605" android:centerColor="#8c6205"
                 android:endColor="#634404" android:angle="270"/>
-            <padding android:left="10dp" android:top="10dp"
-                android:right="10dp" android:bottom="10dp" />
         </shape>
     </inset>
 </item>
@@ -20,8 +18,6 @@
             <corners android:radius="2dp" />
             <gradient android:startColor="#f5aa07" android:centerColor="#c78b06"
                 android:endColor="#b17b05" android:angle="270"/>
-            <padding android:left="8dp" android:top="4dp"
-                android:right="8dp" android:bottom="4dp" />
         </shape>
     </inset>
 </item>
